@@ -1,9 +1,9 @@
 Cosas destacadas que podría configurar en Maven:
   - Uso de un SCM (git) X (Hecho, usar $mvn scm:checkin para commits y $mvn scm:update para pulls)
-  - Creación de nuevos proyectos a partir de archetype
   - Uso del plugin assembly:single, para empaquetar mis proyectos
-  - Mavenizar mis proyectos
   - Hacer el release de un proyecto
+  - Mavenizar mis proyectos
+  - Creación de nuevos proyectos a partir de archetype
 
 Coordenadas de un artifact:
   groupId:artifactId:packaging:version:scope
