@@ -1,5 +1,5 @@
 Cosas destacadas que podría configurar en Maven:
-  - Uso de un SCM (git)
+  - Uso de un SCM (git) X (Hecho, usar $mvn scm:checkin para commits y $mvn scm:update para pulls)
   - Creación de nuevos proyectos a partir de archetype
   - Uso del plugin assembly:single, para empaquetar mis proyectos
   - Mavenizar mis proyectos
