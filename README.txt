@@ -1,7 +1,20 @@
 Cosas destacadas que podría configurar en Maven:
-  - Uso de un SCM (git) X (Hecho, usar $mvn scm:checkin para commits y $mvn scm:update para pulls)
-  - Uso del plugin assembly:single, para empaquetar mis proyectos X (Hecho)
+  X- Añadir el MANIFEST a mi jar
+         Antes de usar, actualizo la Main-Class en pom.xml 
+  X- Uso del plugin assembly:single, para empaquetar mis proyectos
+         $mvn package assembly:single
+  X- Firmar un jar con jarsigner (Hecho, contraseña del almacén de claves: si...h, contraseña de la clave: si...h)
+         Crear la keystore con el comando: $keytool -genkey -v -keystore developer.keystore -alias developer -keyalg RSA -keysize 2048 -validity 10000 
+         $mvn package jarsigner:sign (hay que poner el elemento <keypass> en el pom.xml)
+         OJO! no usar maven para firmar, ya que hay que poner la clave del keystore en el pom.xml, y no es seguro. Para firmar un fichero, usar:
+         $jarsigner -keystore /Java/work/workspace_maven/developer.keystore /Java/work/workspace_maven/maven_git/target/pruebas_maven-1.0-SNAPSHOT.jar developer
+         OJO! no pasa nada si firmo un fichero dos veces
   - Hacer el release de un proyecto
+  X- Uso de un SCM (git) 
+         $mvn scm:checkin para commits y $mvn scm:update para pulls, scm:diff para comparar versiones
+  - Hacer un empaquetado .apk (ver un proyecto de $mvn archetype:generate)
+  - Hacer un empaquetado .ear, .war (ver un proyecto de archetype)
+  - Hacer un empaquetado .app (ver un proyecto de archetype)
   - Mavenizar mis proyectos
   - Creación de nuevos proyectos a partir de archetype
 
